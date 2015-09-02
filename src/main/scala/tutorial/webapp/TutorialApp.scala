@@ -3,7 +3,7 @@ package tutorial.webapp
 import scala.scalajs.js.JSApp
 import org.scalajs.jquery.jQuery
 
-import scala.scalajs.js.annotation.JSExport
+import org.scalajs.dom
 
 /**
  * Created by Mark Soule on 9/1/2015.
@@ -16,10 +16,13 @@ object TutorialApp extends JSApp{
     jQuery("""<button type="button">Click me!</button>""")
       .click(addClickedMessage _)
       .appendTo(jQuery("body"))
+
+    dom.setInterval(() => {jQuery("p:contains('Hello World')").append("<p>click it...</p>")}, 100)
   }
 
   def addClickedMessage(): Unit = {
-    jQuery("body").append("<p>You did a thing!</p>")
+    jQuery("p:contains('Hello World')").append("<p>And goodbye</p>")
+    //jQuery("body").append("<p>You did a thing!</p>")
   }
 
   def main(): Unit = {
