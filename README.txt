@@ -3,7 +3,7 @@ Mark Soule JVM Challenge
 Building:
 
 From project root:
-sbt run
+sbt fullOptJS
 Open HTML file in src/main/resources in your browser.
 
 Warning: Not all of the buttons on the top and bottom are guaranteed to work.
