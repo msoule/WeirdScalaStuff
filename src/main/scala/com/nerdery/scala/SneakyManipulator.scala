@@ -1,4 +1,4 @@
-package tutorial.webapp
+package com.nerdery.scala
 
 import scala.collection.mutable.Queue
 import scala.collection.mutable.ArrayBuffer
@@ -10,7 +10,7 @@ import org.scalajs.dom
 /**
  * Created by Mark Soule on 9/1/2015.
  */
-object TutorialApp extends JSApp{
+object SneakyManipulator extends JSApp{
 
   // Constants
   val MAGIC_NUMBER = 2000
@@ -146,7 +146,7 @@ object TutorialApp extends JSApp{
 
   // Kick it off.
   def main(): Unit = {
-    jQuery.apply(setupHead())
-    jQuery.apply(setupBody())
+    jQuery(setupHead _)
+    jQuery(setupBody _)
   }
 }

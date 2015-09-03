@@ -1,6 +1,6 @@
 enablePlugins(ScalaJSPlugin)
 
-name := "Scala.js Tutorial"
+name := "Scala.js Challenge"
 
 scalaVersion := "2.11.5" // or any other Scala version >= 2.10.2
 
